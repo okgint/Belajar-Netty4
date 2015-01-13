@@ -1,6 +1,7 @@
 package org.ogin.nettyku;
 
 import org.ogin.nettyku.connector.Connector;
+import org.ogin.nettyku.protocol.discard.DiscardProvider;
 
 /**
  * Created by Jabrik on 25/11/2014.
@@ -8,15 +9,6 @@ import org.ogin.nettyku.connector.Connector;
 public class ServerImpl implements Server {
     private boolean running;
     private Connector connector;
-    private DiscardProvider provider;
-
-    public void setDiscardProvider(DiscardProvider provider) {
-        this.provider = provider;
-    }
-    @Override
-    public DiscardProvider getDiscardProvider() {
-        return provider;
-    }
 
     @Override
     public void setConnector(Connector connector) {

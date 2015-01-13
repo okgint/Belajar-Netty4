@@ -1,4 +1,4 @@
-package org.ogin.nettyku.protocol;
+package org.ogin.nettyku.protocol.util;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;

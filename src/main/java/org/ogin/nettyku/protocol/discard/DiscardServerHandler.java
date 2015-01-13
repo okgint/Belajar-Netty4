@@ -1,4 +1,4 @@
-package org.ogin.nettyku;
+package org.ogin.nettyku.protocol.discard;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler;

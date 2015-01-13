@@ -7,10 +7,8 @@ import java.net.InetSocketAddress;
 /**
  * Created by Jabrik on 25/11/2014.
  */
-public interface Connector {
+public interface Connector extends Lifecycle{
     InetSocketAddress getBindAddrss();
-    void start();
-    void stop();
 
     void setServer(Server server);
 }

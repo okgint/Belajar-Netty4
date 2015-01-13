@@ -1,11 +1,12 @@
 package org.ogin.nettyku;
 
+import com.google.common.util.concurrent.AbstractIdleService;
 import org.ogin.nettyku.connector.Connector;
 
 /**
  * Created by Jabrik on 25/11/2014.
  */
-public class ServerImpl implements Server {
+public class ServerImpl extends AbstractIdleService implements Server {
     private boolean running;
     private Connector connector;
     private DiscardProvider provider;
@@ -28,11 +29,17 @@ public class ServerImpl implements Server {
         return connector;
     }
 
-    public void start() {
+    @Override
+    protected void startUp() throws Exception {
         if(running)
             return;
         connector.start();
         connector.setServer(this);
         running = true;
+    }
+
+    @Override
+    protected void shutDown() throws Exception {
+
     }
 }

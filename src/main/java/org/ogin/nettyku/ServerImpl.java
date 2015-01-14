@@ -9,15 +9,6 @@ import org.ogin.nettyku.connector.Connector;
 public class ServerImpl extends AbstractIdleService implements Server {
     private boolean running;
     private Connector connector;
-    private DiscardProvider provider;
-
-    public void setDiscardProvider(DiscardProvider provider) {
-        this.provider = provider;
-    }
-    @Override
-    public DiscardProvider getDiscardProvider() {
-        return provider;
-    }
 
     @Override
     public void setConnector(Connector connector) {

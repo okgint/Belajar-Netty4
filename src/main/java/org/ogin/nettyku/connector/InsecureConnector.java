@@ -2,6 +2,7 @@ package org.ogin.nettyku.connector;
 
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelInitializer;
+import org.ogin.nettyku.protocol.discard.DiscardInitializer;
 
 import java.net.InetSocketAddress;
 
